@@ -18,6 +18,11 @@ public class TodoItemsController : ApiControllerBase
         return await Mediator.Send(query);
     }
 
+    /// <summary>
+    /// Create 
+    /// </summary>
+    /// <param name="command"></param>
+    /// <returns></returns>
     [HttpPost]
     public async Task<ActionResult<int>> Create(CreateTodoItemCommand command)
     {
