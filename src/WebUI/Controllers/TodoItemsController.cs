@@ -29,7 +29,7 @@ public class TodoItemsController : ApiControllerBase
     {
         if (id != command.Id)
         {
-            return BadRequest();
+            return BadRequest(nameof(id));
         }
 
         await Mediator.Send(command);
